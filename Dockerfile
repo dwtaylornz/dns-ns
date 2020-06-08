@@ -12,6 +12,8 @@ ADD setup.sh /
 ADD init.sh / 
 
 # Run Init 
+RUN chmod +x /setup.sh
+RUN chmod +x /init.sh
 RUN /setup.sh
 
 # Volumes
