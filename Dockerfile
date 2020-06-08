@@ -13,7 +13,7 @@ ADD init.sh /
 ADD start_dns.sh /
 
 # Run Init 
-RUN init.sh
+RUN bash init.sh
 
 # Volumes
 #VOLUME 
