@@ -1,5 +1,3 @@
-
-#
 # If no $POLLING_DELAY then default to 0 
 if [ -z "$POLLING_DELAY" ]
         then export POLLING_DELAY=60
