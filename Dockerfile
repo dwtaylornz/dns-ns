@@ -4,7 +4,7 @@ MAINTAINER dwtaylornz@gmail.com
 
 # Install Pre-reqs
 RUN apk update && apk upgrade
-RUN apk add bind openrc
+RUN apk add bind openrc nano
 
 # Copy Assets, setup and init scripts
 COPY /templates /bind/etc/
