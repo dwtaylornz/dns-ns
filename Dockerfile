@@ -12,7 +12,7 @@ ADD setup.sh /
 ADD init.sh / 
 
 # Run Init 
-RUN setup.sh
+RUN /setup.sh
 
 # Volumes
 VOLUME [ /sys/fs/cgroup ] 
