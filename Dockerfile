@@ -8,13 +8,13 @@ RUN apk add bind openrc nano
 
 # Copy Assets, setup and init scripts
 COPY templates/ /etc/bind/
-ADD setup.sh / 
+#ADD setup.sh / 
 ADD init.sh / 
 
 # Run Init 
-RUN chmod +x /setup.sh
+#RUN chmod +x /setup.sh
 RUN chmod +x /init.sh
-RUN /setup.sh
+#RUN /setup.sh
 
 # Volumes
 VOLUME [ /sys/fs/cgroup ] 
