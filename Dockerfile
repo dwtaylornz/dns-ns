@@ -15,6 +15,7 @@ ADD init.sh /
 RUN bash setup.sh
 
 # Volumes
+VOLUME [ /sys/fs/cgroup ] 
 
 # Ports
 EXPOSE 53/tcp
