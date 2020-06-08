@@ -6,15 +6,10 @@ MAINTAINER dwtaylornz@gmail.com
 RUN apk update && apk upgrade
 RUN apk add bind openrc nano
 
-# Copy Assets, setup and init scripts
+# Copy Assets and init script
 COPY templates/ /etc/bind/
-#ADD setup.sh / 
 ADD init.sh / 
-
-# Run Init 
-#RUN chmod +x /setup.sh
 RUN chmod +x /init.sh
-#RUN /setup.sh
 
 # Volumes
 VOLUME [ /sys/fs/cgroup ] 
