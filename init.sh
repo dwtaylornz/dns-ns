@@ -15,7 +15,6 @@ rc-update add named
 
 # Main loop
 # Delay set to $POLLING_DELAY
-cd /etc/bind
 
 while :
 do
