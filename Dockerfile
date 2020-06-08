@@ -3,7 +3,7 @@ FROM alpine
 MAINTAINER dwtaylornz@gmail.com
 
 # Install Pre-reqs
-RUN apk update && apt upgrade
+RUN apk update && apk upgrade
 RUN apk add bind openrc
 
 # Copy Assets, setup and init scripts
