@@ -6,9 +6,8 @@ MAINTAINER dwtaylornz@gmail.com
 RUN apt update && apt upgrade
 RUN apt add bind openrc
 
-# 
-ADD zone.txt /bind/etc
-ADD named.conf /bind/etc
+# Copy Assets
+COPY /templates /bind/etc/
 ADD init.sh / 
 ADD start_dns.sh /
 
@@ -16,7 +15,7 @@ ADD start_dns.sh /
 RUN bash init.sh
 
 # Volumes
-#VOLUME 
+
 
 # Ports
 EXPOSE 53/tcp
