@@ -13,7 +13,7 @@ cd /etc/bind
 
 while :
 do
-  IP=$(curl ifconfig.co)
+  IP=$(curl -s ifconfig.co)
   echo "$IP"
   sed -e "s/\${pub_ip}/210.54.33.24/" -e "s/\${domain}/sigtar.com/" zone.txt > sigtar.com.zone
   sed -e "s/\${pub_ip}/210.54.33.24/" -e "s/\${domain}/loyalbug.com/" zone.txt > loyalbug.com.zone  
