@@ -3,23 +3,22 @@ FROM alpine
 MAINTAINER dwtaylornz@gmail.com
 
 # Install Pre-reqs
-RUN apt update && apt upgrade
-RUN apt add bind openrc
+RUN apk update && apt upgrade
+RUN apk add bind openrc
 
-# Copy Assets
+# Copy Assets, setup and init scripts
 COPY /templates /bind/etc/
+ADD setup.sh / 
 ADD init.sh / 
-ADD start_dns.sh /
 
 # Run Init 
-RUN bash init.sh
+RUN bash setup.sh
 
 # Volumes
-
 
 # Ports
 EXPOSE 53/tcp
 EXPOSE 53/udp
 
 # start 
-CMD ["sh","/start_dns.sh"]
+CMD ["sh","/init.sh"]
